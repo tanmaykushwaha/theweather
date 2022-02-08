@@ -76,7 +76,7 @@ return res.send({
 app.get('/help/*',(req,res) => {
 
     res.render('notfound',{
-        error:'Help article not found'
+        error:'Help article Not found'
     })
 })
 

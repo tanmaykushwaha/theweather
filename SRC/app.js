@@ -1,10 +1,12 @@
 const express = require('express')
-const app = express()
 const path = require('path')
 const hbs = require('hbs')
 const request = require('postman-request')
 const geocode = require('./utils/geocode')
 const forecast = require('./utils/forecast')
+
+const app = express()
+const port = process.env.PORT || 3000
 
 
 // define path for express config
@@ -86,6 +88,6 @@ app.get('*',(req,res) => {
     })
 })
 
-app.listen(3000,() =>{
-    console.log('express is running on 3000')
+app.listen(port,() =>{
+    console.log('express is running on' + port)
 })
